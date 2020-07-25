@@ -1,6 +1,7 @@
 package com.quyunshuo.navigation
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -23,5 +24,14 @@ class SecondFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         return mBinding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        arguments?.let {
+            val userName = MainFragmentArgs.fromBundle(it).userName
+            val age = MainFragmentArgs.fromBundle(it).age
+            Log.d("qqq", "onViewCreated: $userName $age")
+        }
     }
 }

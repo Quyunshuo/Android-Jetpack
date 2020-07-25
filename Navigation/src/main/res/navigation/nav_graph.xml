@@ -19,6 +19,18 @@
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
 
+        <!-- 添加参数 -->
+        <argument
+            android:name="user_name"
+            android:defaultValue='"unknown"'
+            app:argType="string" />
+
+        <!-- 添加参数 -->
+        <argument
+            android:name="age"
+            android:defaultValue="0"
+            app:argType="integer" />
+
     </fragment>
 
     <fragment

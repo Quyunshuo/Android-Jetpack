@@ -33,6 +33,18 @@ class MainFragment : Fragment() {
     }
 
     private fun initView() {
-        mBinding.mToSecondFragmentBtn.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_mainFragment_to_secondFragment))
+
+        val bundle = MainFragmentArgs.Builder()
+            .setUserName("Quyunshuo")
+            .setAge(22)
+            .build()
+            .toBundle()
+
+        mBinding.mToSecondFragmentBtn.setOnClickListener(
+            Navigation.createNavigateOnClickListener(
+                R.id.action_mainFragment_to_secondFragment,
+                bundle
+            )
+        )
     }
 }
