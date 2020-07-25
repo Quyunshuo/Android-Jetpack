@@ -19,6 +19,14 @@
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
 
+    </fragment>
+
+    <fragment
+        android:id="@+id/secondFragment"
+        android:name="com.quyunshuo.navigation.SecondFragment"
+        android:label="fragment_second"
+        tools:layout="@layout/fragment_second">
+
         <!-- 添加参数 -->
         <argument
             android:name="user_name"
@@ -30,13 +38,6 @@
             android:name="age"
             android:defaultValue="0"
             app:argType="integer" />
-
     </fragment>
-
-    <fragment
-        android:id="@+id/secondFragment"
-        android:name="com.quyunshuo.navigation.SecondFragment"
-        android:label="fragment_second"
-        tools:layout="@layout/fragment_second" />
 
 </navigation>

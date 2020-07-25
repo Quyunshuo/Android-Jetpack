@@ -29,8 +29,8 @@ class SecondFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         arguments?.let {
-            val userName = MainFragmentArgs.fromBundle(it).userName
-            val age = MainFragmentArgs.fromBundle(it).age
+            val userName = SecondFragmentArgs.fromBundle(it).userName
+            val age = SecondFragmentArgs.fromBundle(it).age
             Log.d("qqq", "onViewCreated: $userName $age")
         }
     }

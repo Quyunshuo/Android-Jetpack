@@ -34,7 +34,7 @@ class MainFragment : Fragment() {
 
     private fun initView() {
 
-        val bundle = MainFragmentArgs.Builder()
+        val bundle = SecondFragmentArgs.Builder()
             .setUserName("Quyunshuo")
             .setAge(22)
             .build()
