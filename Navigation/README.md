@@ -10,3 +10,8 @@
 #总结
 
 当你想切换 Fragment 时,使用 NavController 对象,告诉它你想去的 Navigation Graph 中的哪个 Fragment,NavController 会将你想去的 Fragment 展示在 NavHostFragment 中
+
+#注意
+1.使用 navigate() 方法跳转其他 Fragment,再 navigateUp() 该 Fragment 出栈并返回上一个界面时,会重走上一个界面的 onCreateView() 和 onViewCreated() 生命周期方法
+导致View和数据的初始化代码逻辑会重新执行,每次返回都会刷新页面,并且如果上一页面中初始化逻辑较多,可能会导致返回时有明显卡顿
+原因: Navigation 跳转另一 Fragment 时,navigate() 方法源码中使用的是 replace() 方式,并不是 add() hide() show(),这也导致了 Fragment返回时是重新 Create 的
