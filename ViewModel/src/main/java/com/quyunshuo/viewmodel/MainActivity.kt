@@ -1,5 +1,6 @@
 package com.quyunshuo.viewmodel
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
@@ -17,10 +18,16 @@ class MainActivity : AppCompatActivity() {
 
     private val mViewModel by lazy { ViewModelProvider(this).get(MainViewModel::class.java) }
 
+    private val mAndroidViewModel by lazy {
+        ViewModelProvider.AndroidViewModelFactory.getInstance(application)
+            .create(MainAndroidViewModel::class.java)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(mBinding.root)
         initView()
+        mAndroidViewModel.showToast("AndroidViewModel")
     }
 
     private fun initView() {
