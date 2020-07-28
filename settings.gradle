@@ -1,3 +1,4 @@
+include ':LiveData'
 include ':ViewModel'
 include ':Navigation'
 include ':app'
