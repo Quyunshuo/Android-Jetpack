@@ -1,3 +1,4 @@
+include ':Room'
 include ':LiveData'
 include ':ViewModel'
 include ':Navigation'
