@@ -1,4 +1,4 @@
-package com.quyunshuo.room
+package com.quyunshuo.room.base
 
 import android.app.Application
 import android.content.Context
