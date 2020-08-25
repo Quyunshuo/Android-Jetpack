@@ -1,4 +1,4 @@
-package com.quyunshuo.hilt.db
+package com.quyunshuo.hilt.testclass
 
 import android.util.Log
 import javax.inject.Inject
